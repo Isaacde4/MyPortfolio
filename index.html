@@ -3,52 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Heat Map - Ghana</title>
-
-  <!-- Leaflet CSS & JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  <title>Isaac's Creative Portfolio</title>
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+  <!-- Your main CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 20px;
+      width: 250px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #00d2ff;
+    }
+
+    .card i {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background: #00d2ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0095ff;
+      box-shadow: 0 0 15px #00d2ff;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Urban Heat Map - Ghana</h1>
-    <p>Select a city to view temperature hotspots.</p>
+  <h1>Isaac's Creative Portfolio</h1>
+  <p class="subtitle">A collection of my digital projects and interactive experiments.</p>
 
-    <!-- City Selector -->
-    <select id="citySelect">
-      <option value="accra">Accra</option>
-      <option value="kumasi">Kumasi</option>
-      <option value="tema">Tema</option>
-      <option value="takoradi">Takoradi</option>
-      <option value="cape_coast">Cape Coast</option>
-      <option value="tamale">Tamale</option>
-      <option value="bolgatanga">Bolgatanga</option>
-      <option value="sunyani">Sunyani</option>
-      <option value="techiman">Techiman</option>
-      <option value="ho">Ho</option>
-    </select>
+  <div class="project-grid">
+    <!-- Valentine Card -->
+    <div class="card">
+      <i class="fas fa-heart" style="color:#ff6b6b;"></i>
+      <h2>Valentine Card</h2>
+      <p>Interactive Valentine’s Day card with animations.</p>
+      <a href="https://isaacde4.github.io/Valentine-Card/" class="btn" target="_blank">View Project</a>
+    </div>
 
-    <!-- Map Container -->
-    <div id="map-container">
-      <div id="map"></div>
+    <!-- Smart City Dashboard -->
+    <div class="card">
+      <i class="fas fa-city" style="color:#00d2ff;"></i>
+      <h2>Smart City Dashboard</h2>
+      <p>Interactive city analytics and indicators.</p>
+      <a href="https://isaacde4.github.io/SmartCity_Dashboard/" class="btn" target="_blank">View Project</a>
+    </div>
 
-      <!-- Legend -->
-      <div id="legend">
-        <h3>Temperature (°C)</h3>
-        <div><span style="background: blue"></span> Low</div>
-        <div><span style="background: lime"></span> Medium</div>
-        <div><span style="background: orange"></span> High</div>
-        <div><span style="background: red"></span> Very High</div>
-      </div>
+    <!-- Urban Heat Map -->
+    <div class="card">
+      <i class="fas fa-fire" style="color:#ff5722;"></i>
+      <h2>Urban Heat Map</h2>
+      <p>Visualize temperature hotspots in major cities in Ghana.</p>
+      <a href="https://isaacde4.github.io/Urban_Heat_Map/" class="btn" target="_blank">View Project</a>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
