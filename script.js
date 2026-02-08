@@ -12,6 +12,6 @@ window.onload = () => {
     }
 
     if (title) {
-        title.textContent = greeting;
+        title.textContent = `${greeting}, welcome to Isaac's Interactive Projects!`;
     }
 };
